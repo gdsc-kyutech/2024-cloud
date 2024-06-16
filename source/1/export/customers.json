@@ -1,0 +1,104 @@
+[
+    {
+        "Email": "amani_ohara@hassie.info",
+        "ID": "22530",
+        "Name": "Amani O'Hara",
+        "Phone": "(989) 239-0083",
+        "treatments": [
+            {
+                "cost": 1602,
+                "description": "Bladder Stone Removal",
+                "status": "proposed"
+            },
+            {
+                "cost": 33,
+                "description": "Vaccination",
+                "status": "approved"
+            },
+            {
+                "cost": 489,
+                "description": "Benign Skin Mass Removal",
+                "status": "rejected"
+            },
+            {
+                "cost": 552,
+                "description": "Tooth Extraction",
+                "status": "approved"
+            }
+        ]
+    },
+    {
+        "Email": "brooke_torp@lola.net",
+        "ID": "34216",
+        "Name": "Brooke Torp",
+        "Phone": "676.661.1456",
+        "treatments": [
+            {
+                "cost": 28,
+                "description": "Vaccination",
+                "status": "approved"
+            },
+            {
+                "cost": 36,
+                "description": "Deworming medication",
+                "status": "proposed"
+            }
+        ]
+    },
+    {
+        "Email": "elroy_dickens88@nestor.biz",
+        "ID": "70156",
+        "Name": "Elroy Dickens",
+        "Phone": "481-816-2004",
+        "treatments": null
+    },
+    {
+        "Email": "hank_ullrich@hillard.info",
+        "ID": "82964",
+        "Name": "Hank Ullrich",
+        "Phone": "711.757.4837 x847",
+        "treatments": null
+    },
+    {
+        "Email": "lukas.dickinson@morgan.info",
+        "ID": "63503",
+        "Name": "Lukas Dickinson",
+        "Phone": "381.878.7573 x7866",
+        "treatments": null
+    },
+    {
+        "Email": "orlando80@derrick.org",
+        "ID": "31652",
+        "Name": "Orlando Lubowitz",
+        "Phone": "746.302.9473",
+        "treatments": null
+    },
+    {
+        "Email": "shanelle.gleason@verona.name",
+        "ID": "63570",
+        "Name": "Shanelle Gleason",
+        "Phone": "1-216-134-2722 x5827",
+        "treatments": null
+    },
+    {
+        "Email": "timmothy.lang@stevie.org",
+        "ID": "96978",
+        "Name": "Timmothy Lang",
+        "Phone": "(329) 651-8694",
+        "treatments": null
+    },
+    {
+        "Email": "verdie94@joanny.org",
+        "ID": "99627",
+        "Name": "Verdie Dibbert",
+        "Phone": "(748) 047-3963 x81784",
+        "treatments": null
+    },
+    {
+        "Email": "willis.quigley@alfonzo.net",
+        "ID": "45510",
+        "Name": "Willis Quigley",
+        "Phone": "1-656-365-9602",
+        "treatments": null
+    }
+]

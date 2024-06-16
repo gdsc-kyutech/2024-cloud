@@ -1,7 +1,5 @@
-# 2. サーバレスアーキテクチャによる映像ライブ配信システムの構築
+# 2. Cloud Run と Firestore によるサーバーレスREST APIの構築
 
-## (TBD)
-
-
+[Google Cloud Skills Boost - Developing a REST API with Go and Cloud Run](https://www.cloudskillsboost.google/course_templates/741/labs/464421) に取り組んで、Cloud Run と Firestore によるサーバーレス REST API の構築を行いましょう。
 
 [目次に戻る](README.md)
