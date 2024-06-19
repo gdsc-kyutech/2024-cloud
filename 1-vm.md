@@ -37,7 +37,8 @@ Skills Boost の注意点
     1. [golang-samples/getting-started/gce/main.go](./source/1/main.go)を編集する
         1. `/v1/customer/22530`にアクセスするとJsonが表示される→成功
             1. [Google Cloud Skills Boost - Developing a REST API with Go and Cloud Run](https://www.cloudskillsboost.google/course_templates/741/labs/464421) と同様の動作が確認できる
-                1． アクセスできない場合は、[Google Cloud Skills Boost - Develop Serverless Applications on Cloud Run](https://www.cloudskillsboost.google/course_templates/741) の左メニューから`Go と Cloud Run を使用した REST API の開発`をクリック
+
+[Google Cloud Skills Boost - Developing a REST API with Go and Cloud Run](https://www.cloudskillsboost.google/course_templates/741/labs/464421) にアクセスできない場合は、[Google Cloud Skills Boost - Develop Serverless Applications on Cloud Run](https://www.cloudskillsboost.google/course_templates/741) の左メニューから`Go と Cloud Run を使用した REST API の開発`をクリック
 
 ## Google Cloud Platform の概要
 
