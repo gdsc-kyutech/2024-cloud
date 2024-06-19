@@ -12,7 +12,7 @@
 Revision '' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
 ```
 
-このエラーは、Dockerfileのdebianのバージョンが古く、Goが使用しているGLIBCのバージョンと合わないためビルドに失敗したため、サーバーが起動できていないというものです。（参考 : https://tech-lab.sios.jp/archives/35991 ）
+このエラーは、Dockerfileのdebianのバージョンが古く、Goが使用しているGLIBCのバージョンと合わないためビルドに失敗し、サーバーが起動できていないというものです。（参考 : https://tech-lab.sios.jp/archives/35991 ）
 
 英語版ではdebian12を使用しているので、Dockerfileを以下のように修正してください。
 
