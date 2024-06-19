@@ -4,6 +4,8 @@
 
 Skills Boost の注意点
 - 初回はNoCostのラボでも二回目以降はCreditが必要である
+  - 回数の判定はコース単位で行われるため、同じコースの別のラボを実施すると同じコースの他のラボが初回でもCreditが必要になる
+  - つまり、NoCostで実施するためには、コースを変える必要がある（今回実施するラボはどちらも別コースなので、勝手に他のラボを実施しなければNoCostで実施できる）
 - ラボで必要ではないリソースや必要数以上のリソースを使用するとアカウントがブロックされる場合がある
 - 制限時間があるため余裕持って終われるようにする
 
@@ -12,21 +14,21 @@ Skills Boost の注意点
 1. [Google Cloud Skills Boost - Compute Engine を使用した Google Cloud でのウェブアプリのホスティング](https://www.cloudskillsboost.google/course_templates/638/labs/480366?locale=ja)
     1. `設定と要件` をやる
         1. `リージョンとゾーンを設定する` はやらなくて良い
-1. [Compute Engine での Go のスタートガイド](https://cloud.google.com/go/getting-started/getting-started-on-compute-engine?hl=ja)
+2. [Compute Engine での Go のスタートガイド](https://cloud.google.com/go/getting-started/getting-started-on-compute-engine?hl=ja)
     1. `目標`を読む
-    1. `料金`を読む（今回はSkillsBoostアカウントを作成して使用しているため、初回は無料で2回目以降が1クレジット）
-    1. `準備`を行う
+    2. `料金`を読む（今回はSkillsBoostアカウントを作成して使用しているため、初回は無料で2回目以降が1クレジット）
+    3. `準備`を行う
         1. `プロジェクト セレクタに移動`をクリックし、プロジェクトをクリックし、プロジェクト ID をメモしておく
             1. 例 : qwiklabs-gcp-02-84ace8ee5776
-    1. `APIを有効にする` をクリックし、Compute Engine, Cloud Build API を有効化する
-    1. `Cloud Shellに移動`をクリックし、環境のセットアップ（git clone）を行う
-    1. `gcloud config set project YOUR_PROJECT_ID` を実行する
+    4. `APIを有効にする` をクリックし、Compute Engine, Cloud Build API を有効化する
+    5. `Cloud Shellに移動`をクリックし、環境のセットアップ（git clone）を行う
+    6. `gcloud config set project YOUR_PROJECT_ID` を実行する
         1. YOUR_PROJECT_ID はメモしておいたプロジェクト ID
-        1. ガイドページの環境変数設定機能を使うと便利（赤いペン）
-    1. `Cloud Shell でアプリを実行する` をやる
+        2. ガイドページの環境変数設定機能を使うと便利（赤いペン）
+    7. `Cloud Shell でアプリを実行する` をやる
         1. これをやることによって、VM内のローカル環境で動作確認が行える
             1. `ポート8080でプレビュー` でHelloWorld!を確認できたら成功
-    1. `単一インスタンスへのデプロイ` をやる
+    8. `単一インスタンスへのデプロイ` をやる
         1. ビルドを行う前に、ファイルを修正する
             1. [golang-samples/getting-started/gce/startup-script.sh](./source/1/startup-script.sh)を編集する
                 1. Logging機能が提供終了している？ためか動作しないため
@@ -34,7 +36,7 @@ Skills Boost の注意点
                 1. バージョン不整合によりコンパイルエラーが発生しないようにビルド環境と実行環境を合わせる
         2. ZONEは `us-central1-a` を使用する（なんでもいい）
         3. 外部 IP アドレスからHelloWorld!を確認できたら成功
-    1. [golang-samples/getting-started/gce/main.go](./source/1/main.go)を編集する
+    9. [golang-samples/getting-started/gce/main.go](./source/1/main.go)を編集する
         1. `/v1/customer/22530`にアクセスするとJsonが表示される→成功
             1. [Google Cloud Skills Boost - Developing a REST API with Go and Cloud Run](https://www.cloudskillsboost.google/course_templates/741/labs/464421) または [※バグあり Google Cloud Skills Boost - Go と Cloud Run を使用した REST API の開発](https://www.cloudskillsboost.google/course_templates/741/labs/463386) と同様の動作が確認できる
 
