@@ -255,8 +255,8 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
         ```sh
         gcloud compute instances delete my-app-instance --zone=us-central1-a --delete-disks=all
         ```
-        > [!ATTENTION]
-        > 削除するインスタンスの`zone`を指定する必要があります。今回は`us-central1-a`です。
+> [!ATTENTION]
+> 削除するインスタンスの`zone`を指定する必要があります。今回は`us-central1-a`です。
     1.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
         ![Delete Resource](img/1-DeleteResource.png)
 1. ファイアウォールルールの削除
