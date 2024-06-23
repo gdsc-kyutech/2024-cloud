@@ -216,8 +216,8 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --tags http-server
     ```
 
-    > [!ATTENTION]
-    > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> [!ATTENTION]
+> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 1. 次のコマンドを実行してインスタンスへのトラフィックを許可するファイアウォールルールを作成します。
     ```sh
