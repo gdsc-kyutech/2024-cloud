@@ -240,8 +240,8 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
     http://YOUR_INSTANCE_IP
     ```
-    > [!ATTENTION]
-    > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
+> [!ATTENTION]
+> `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
 1. 「`Hello, World!`」と表示されていれば成功です。
 
