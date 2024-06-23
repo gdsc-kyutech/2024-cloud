@@ -18,8 +18,12 @@ Google社内で利用されているインフラを自分のサービスに活�
 - BigQuery
 - Compute Engine
 
-この中で馴染みがあるものは**Google Workspace**ではないでしょうか。Google Workspaceには、GmailやGoogle Formsなどのサービスが含まれています。
+この中で馴染みがあるものは**Google Workspace**ではないでしょうか。
+
+Google Workspaceには、GmailやGoogle Formsなどのサービスが含まれています。
+
 また、**BigQuery**はビッグデータに関するサービスであり、データ管理や分析に役立てることができます。
+
 その他にも仮想マシンサービスの**Compute Engine**など、様々な用途に応じたサービスが提供されています。
 
 ## Google Cloud Skills Boost の概要
