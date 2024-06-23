@@ -1,6 +1,7 @@
 ## Google Cloud Platform の概要
 
 Google Cloud Platform(GCP)とは、Googleが提供するクラウドコンピューテイングサービスの総称です。
+
 Google社内で利用されているインフラを自分のサービスに活用することが可能です。
 
 
