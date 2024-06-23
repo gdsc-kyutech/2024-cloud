@@ -330,8 +330,8 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
     http://YOUR_INSTANCE_IP/v1/customer/22530
     ```
-    > [!ATTENTION]
-    > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
+> [!ATTENTION]
+> `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
 1. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
 
