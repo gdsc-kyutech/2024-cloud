@@ -189,10 +189,10 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     gsutil mb gs://YOUR_BUCKET_NAME
     ```
 
-    > [!ATTENTION]
-    > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
-    > - バケットには任意の名前を付けることができます。付けられるバケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります。
-    > - 今回は`PROJECT_ID`をバケット名として使用します。
+> [!ATTENTION]
+> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> - バケットには任意の名前を付けることができます。付けられるバケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります。
+> - 今回は`PROJECT_ID`をバケット名として使用します。
 
 1. 次のコマンドを実行してビルドを開始します。
     ```sh
