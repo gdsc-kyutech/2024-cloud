@@ -9,17 +9,17 @@
 からダウンロードし、インストールしてください。
 1. Chromeを起動し、右上のアイコンをクリックします。
 
-    ![login account](img/1-Login01.png)
+    ![login account1](img/1-Login01.png)
 
 1. `追加`をクリックし、事前に配布しているドメインが`@gdsc.tamasan238.work`のアカウントでログインしてください。
 1. [Google Cloud Skills Boost](https://www.cloudskillsboost.google/?locale=ja)
 にアクセスし、右上の`ログイン`をクリックします。
 
-    ![login account](img/1-Login02.png)
+    ![login account2](img/1-Login02.png)
 
 1. 続いて`Google アカウントでログイン`をクリックすると、Google Cloud Skills Boostにログインすることができました。
 
-    ![login account](img/1-Login03.png)
+    ![login account3](img/1-Login03.png)
 
 ### Google Cloudにアクセスする
 Google Cloud Skills Boostの受講にあたって、以下の注意事項を確認してください。
@@ -43,36 +43,36 @@ Google Cloud Skills Boostの受講にあたって、以下の注意事項を確�
 
     ![Start Lab](img/1-StartLab1.png)
 
-1. `Open Google Cloud console`を**右クリック**し、`シークレット ウィンドウで開く`を選択します。
+2. `Open Google Cloud console`を**右クリック**し、`シークレット ウィンドウで開く`を選択します。
     1. ログイン画面が表示されたら、**先ほど発行された**Usernameをコピー&ペーストして`次へ`をクリックします。
 
         ![Username](img/1-Username.png)
     
-    1. 同様にPasswordをコピー&ペーストして`次へ`をクリックします。
+    2. 同様にPasswordをコピー&ペーストして`次へ`をクリックします。
     
         ![Password](img/1-Password.png)
 
-1. 確認画面が表示されます。内容を確認して`理解しました`をクリックします。
+3. 確認画面が表示されます。内容を確認して`理解しました`をクリックします。
 
     ![I understand](img/1-Confirm.png)
 
-1. 同意画面が表示されます。内容を確認して1つ目のチェックボックスにチェックをつけて`AGREE AND CONTINUE`をクリックします。
+4. 同意画面が表示されます。内容を確認して1つ目のチェックボックスにチェックをつけて`AGREE AND CONTINUE`をクリックします。
 
     ![I understand](img/1-Agree.png)
 
-1. Google Cloud コンソールのダッシュボードにアクセスすることができました。
+5. Google Cloud コンソールのダッシュボードにアクセスすることができました。
 
     ![Cloud overview](img/1-CloudOverview_Ja.png)
 
-    > [!TIP]
-    > 言語は右上の三点メニューの`Perferences`または`設定`から変更することができます。
-    > ![Perferences](img/1-Preferences.png)
+> [!TIP]
+> 言語は右上の三点メニューの`Perferences`または`設定`から変更することができます。
+> ![Perferences](img/1-Preferences.png)
 
 ### Cloud Shell をアクティブにする
 Cloud Shellは、開発ツールと一緒に読み込まれるGoogle Cloudで稼働する仮想マシンです。Cloud Shellを使用すると、コマンドラインでGoogle Cloudリソースにアクセスできます。
 
 1. コンソール画面上部にある`Cloud Shell をアクティブにする`アイコンをクリックします。
-1. 画面下部にCloud Shellが現れ、ポップアップが表示されるので`承認`をクリックします。
+2. 画面下部にCloud Shellが現れ、ポップアップが表示されるので`承認`をクリックします。
 
     ![Perferences01](img/1-CloudShellActive01.png)
 
@@ -115,22 +115,22 @@ gcloud config list project
 
     1. [こちら](https://console.cloud.google.com/flows/enableapi?apiid=compute%2Ccloudbuild.googleapis.com&hl=ja&_ga=2.43494823.320691267.1718768559-758716497.1715673126)
     のリンクを**右クリック**し、シークレットウィンドウで開きます。
-    1. プロジェクト名が先ほどメモした`PROJECT_ID`と同じであることを確認して`次へ`をクリックします。
+    2. プロジェクト名が先ほどメモした`PROJECT_ID`と同じであることを確認して`次へ`をクリックします。
 
         ![API02](img/1-API01.png)
 
-    1. `有効にする`をクリックします。
+    3. `有効にする`をクリックします。
 
         ![API02](img/1-API02.png)
 
-1. 環境のセットアップ（git clone）を行います。Cloud Shellでは直接クラウドリソースにアクセスすることができます。
+2. 環境のセットアップ（git clone）を行います。Cloud Shellでは直接クラウドリソースにアクセスすることができます。
     1. [こちら](https://cloud.google.com/console/cloudshell/open?git_repo=https%3A%2F%2Fgithub.com%2FGoogleCloudPlatform%2Fgolang-samples&working_dir=getting-started%2Fgce&hl=ja)
     のリンクを**右クリック**し、シークレットウィンドウで開きます。
-    1. `確認`をクリックします。
+    2. `確認`をクリックします。
 
         ![Git Clone](img/1-GitClone.png)
 
-1. 次のコマンドをCloud Shellで実行し、新しいGoogle Cloudプロジェクトを設定します。
+3. 次のコマンドをCloud Shellで実行し、新しいGoogle Cloudプロジェクトを設定します。
     ```sh
     gcloud config set project PROJECT_ID
     ```
@@ -144,42 +144,42 @@ gcloud config list project
     ./app
     ```
 
-1. Cloud Shell画面右上の`ウェブでプレビュー`アイコンをクリックし、`ポート8080でプレビュー`を選択します。新しいウィンドウが開き、実行中のアプリが表示されます。
+2. Cloud Shell画面右上の`ウェブでプレビュー`アイコンをクリックし、`ポート8080でプレビュー`を選択します。新しいウィンドウが開き、実行中のアプリが表示されます。
 
-![Port8080](img/1-Port8080.png)
+    ![Port8080](img/1-Port8080.png)
 
-1. ウェブブラウザに「`Hello, World!`」と表示されます。
+3. ウェブブラウザに「`Hello, World!`」と表示されます。
 
-![Hello World!](img/1-HelloWorld.png)
+    ![Hello World!](img/1-HelloWorld.png)
 
-1. Cloud Shellの画面に戻り、`Ctrl`+`C`キーを同時に押してローカルウェブサーバを停止させます。
+4. Cloud Shellの画面に戻り、`Ctrl`+`C`キーを同時に押してローカルウェブサーバを停止させます。
 
-![Stop Server](img/1-Ctrl+C.png)
+    ![Stop Server](img/1-Ctrl+C.png)
 
 ### ファイルの修正
 次にCloud Buildを使用し、アプリのビルドを行います。提供されているファイルには不具合があるため、ビルドを行う前にファイルの修正を行います。
 
 1. Logging機能が動作しないため、`startup-script.sh`ファイルを編集します。
     1. Cloud Shell Editorの画面でEXPLORERを開きます。
-    1. `cloudshell_open/golang-samples/getting-started/gce/startup-script.sh`にアクセスします。
+    2. `cloudshell_open/golang-samples/getting-started/gce/startup-script.sh`にアクセスします。
 
         ![Edit startup-script.sh](img/1-strtup-script.png)
     
-    1. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
-    1. [こちら](./source/1/startup-script.sh)
+    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
+    4. [こちら](./source/1/startup-script.sh)
         にアクセスし、コードをコピーして先ほど内容を全削除した`startup-script.sh`に貼り付けます。
-    1. 変更内容は自動的に保存されます。
+    5. 変更内容は自動的に保存されます。
 
-1. ビルド環境と実行環境のバージョンを合わせるため、`cloudbuild.yaml`ファイルを編集します。
+2. ビルド環境と実行環境のバージョンを合わせるため、`cloudbuild.yaml`ファイルを編集します。
     1. 先ほどと同様にCloud Shell Editorの画面でEXPLORERを開きます。
-    1. `cloudshell_open/golang-samples/getting-started/gce/cloudbuild.yaml`にアクセスします。
+    2. `cloudshell_open/golang-samples/getting-started/gce/cloudbuild.yaml`にアクセスします。
 
         ![Edit cloudbuild.yaml](img/1-cloudbuild.png)
 
-    1. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
-    1. [こちら](./source/1/cloudbuild.yaml)
+    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
+    4. [こちら](./source/1/cloudbuild.yaml)
         にアクセスし、コードをコピーして先ほど内容を全削除した`cloudbuild.yaml`に貼り付けます。
-    1. 変更内容は自動的に保存されます。
+    5. 変更内容は自動的に保存されます。
 
 ### アプリのビルド
 Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧縮し、Cloud Storageバケットにこのファイルをアップロードできます。バケットは、Cloud Storageでデータを格納する基本的なコンテナです。
@@ -194,7 +194,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
 > - バケットには任意の名前を付けることができます。付けられるバケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります。
 > - 今回は`PROJECT_ID`をバケット名として使用します。
 
-1. 次のコマンドを実行してビルドを開始します。
+2. 次のコマンドを実行してビルドを開始します。
     ```sh
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
@@ -219,7 +219,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
 > [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
-1. 次のコマンドを実行してインスタンスへのトラフィックを許可するファイアウォールルールを作成します。
+2. 次のコマンドを実行してインスタンスへのトラフィックを許可するファイアウォールルールを作成します。
     ```sh
     gcloud compute firewall-rules create default-allow-http-80 \
     --allow tcp:80 \
@@ -228,7 +228,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --description "Allow port 80 access to http-server"
     ```
 
-1. 次のコマンドを実行してインスタンスの外部IPアドレスを取得します。
+3. 次のコマンドを実行してインスタンスの外部IPアドレスを取得します。
     ```sh
     gcloud compute instances list
     ```
@@ -236,14 +236,14 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
 
     ![External_IP01](img/1-External_IP01.png)
 
-1. ブラウザで次のURLにアクセスし、アプリが実行されていることを確認してください。
+4. ブラウザで次のURLにアクセスし、アプリが実行されていることを確認してください。
     ```
     http://YOUR_INSTANCE_IP
     ```
 > [!IMPORTANT]
 > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
-1. 「`Hello, World!`」と表示されていれば成功です。
+5. 「`Hello, World!`」と表示されていれば成功です。
 
     ![VM Hello World!](img/1-VM_HelloWorld.png)
 
@@ -259,17 +259,17 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
         > [!IMPORTANT]
         > 削除するインスタンスの`zone`を指定する必要があります。今回は`us-central1-a`です。
 
-    1.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
+    2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
 
         ![Delete Resource](img/1-DeleteResource.png)
 
-1. ファイアウォールルールの削除
+2. ファイアウォールルールの削除
 
     1. 次のコマンドを実行して、ファイアウォールルールを削除します。
         ```sh
         gcloud compute firewall-rules delete default-allow-http-80
         ```
-    1.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
+    2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
 
 
 ### 自作アプリを仮想マシン上で動作させる
@@ -277,20 +277,20 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
 
 1. `main.go`ファイルを書き換えます。
     1. Cloud Shell Editorの画面でEXPLORERを開きます。
-    1. `cloudshell_open/golang-samples/getting-started/gce/main.go`にアクセスします。
+    2. `cloudshell_open/golang-samples/getting-started/gce/main.go`にアクセスします。
         ![Edit main.go](img/1-main.png)
-    1. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
-    1. [こちら](./source/1/main.go)
+    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
+    4. [こちら](./source/1/main.go)
         にアクセスし、コードをコピーして先ほど内容を全削除した`main.go`に貼り付けます。
-    1. 変更内容は自動的に保存されます。
+    5. 変更内容は自動的に保存されます。
 
-1. Cloud Shellで以下のコマンドを実行し、アプリのビルドに必要なライブラリをインストールします。
+2. Cloud Shellで以下のコマンドを実行し、アプリのビルドに必要なライブラリをインストールします。
     ```sh
     go get github.com/gorilla/handlers
     go get github.com/gorilla/mux
     ```
 
-1. 先ほどと同様の手順で、ビルドを行います。
+3. 先ほどと同様の手順で、ビルドを行います。
     ```sh
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
@@ -298,7 +298,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
 > [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
-1. 同様に、Compute Engineインスタンスを作成します。
+4. 同様に、Compute Engineインスタンスを作成します。
     ```sh
     gcloud compute instances create my-app-instance \
     --image-family=debian-10 \
@@ -314,7 +314,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
 > [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
-1. 同様に、ファイアウォールルールを作成します。
+5. 同様に、ファイアウォールルールを作成します。
     ```sh
     gcloud compute firewall-rules create default-allow-http-80 \
     --allow tcp:80 \
@@ -323,7 +323,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --description "Allow port 80 access to http-server"
     ```
 
-1. 以下のコマンドを実行して、インスタンスの外部IPアドレスを取得します。
+6. 以下のコマンドを実行して、インスタンスの外部IPアドレスを取得します。
     ```sh
     gcloud compute instances list
     ```
@@ -331,25 +331,25 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     
     ![External_IP02](img/1-External_IP02.png)
 
-1. ブラウザで次のURLにアクセスし、アプリが実行されていることを確認してください。
+7. ブラウザで次のURLにアクセスし、アプリが実行されていることを確認してください。
     ```
     http://YOUR_INSTANCE_IP/v1/customer/22530
     ```
 > [!IMPORTANT]
 > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
-1. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
+7. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
 
     ![](img/1-VM22530.png)
 
     1. ここでURL末尾の`22530`は
     [main.go](./source/1/main.go)
     で定義している顧客の`ID`に対応しています。URLを指定することで顧客の取引履歴にアクセスしています。
-    1. 以下は取引履歴が存在しない`ID: "70156"`の顧客のデータを参照した場合です。
+    2. 以下は取引履歴が存在しない`ID: "70156"`の顧客のデータを参照した場合です。
 
         ![](img/1-VM70156.png)
     
-    1. 存在しない顧客である`ID: "12345"`を参照するとこのようになります。
+    3. 存在しない顧客である`ID: "12345"`を参照するとこのようになります。
     
         ![](img/1-VM12345.png)
  
