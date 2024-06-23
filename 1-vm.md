@@ -64,7 +64,7 @@ Google Cloud Skills Boostの受講にあたって、以下の注意事項を確�
 
     ![Cloud overview](img/1-CloudOverview_Ja.png)
 
-    > [!ATTENTION]
+    > [!TIP]
     > 言語は右上の三点メニューの`Perferences`または`設定`から変更することができます。
     > ![Perferences](img/1-Preferences.png)
 
@@ -134,7 +134,7 @@ gcloud config list project
     ```sh
     gcloud config set project PROJECT_ID
     ```
-> [!ATTENTION]
+> [!IMPORTANT]
 > `PROJECT_ID`はそれぞれのIDに置き換えてください。
 
 ### Cloud Shellでアプリを実行
@@ -189,7 +189,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     gsutil mb gs://YOUR_BUCKET_NAME
     ```
 
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 > - バケットには任意の名前を付けることができます。付けられるバケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります。
 > - 今回は`PROJECT_ID`をバケット名として使用します。
@@ -199,7 +199,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
 
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 ### Compute Engine インスタンスの作成と構成
@@ -216,7 +216,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --tags http-server
     ```
 
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 1. 次のコマンドを実行してインスタンスへのトラフィックを許可するファイアウォールルールを作成します。
@@ -240,7 +240,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
     http://YOUR_INSTANCE_IP
     ```
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
 1. 「`Hello, World!`」と表示されていれば成功です。
@@ -256,7 +256,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
         ```sh
         gcloud compute instances delete my-app-instance --zone=us-central1-a --delete-disks=all
         ```
-> [!ATTENTION]
+> [!IMPORTANT]
 > 削除するインスタンスの`zone`を指定する必要があります。今回は`us-central1-a`です。
     1.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
         ![Delete Resource](img/1-DeleteResource.png)
@@ -291,7 +291,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
 
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 1. 同様に、Compute Engineインスタンスを作成します。
@@ -307,7 +307,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --tags http-server
     ```
 
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 1. 同様に、ファイアウォールルールを作成します。
@@ -331,7 +331,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
     http://YOUR_INSTANCE_IP/v1/customer/22530
     ```
-> [!ATTENTION]
+> [!IMPORTANT]
 > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
 1. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
