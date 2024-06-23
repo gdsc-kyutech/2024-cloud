@@ -32,10 +32,10 @@ Google Cloud Skills Boostの受講にあたって、以下の注意事項を確�
 1. [Compute Engine を使用した Google Cloud でのウェブアプリのホスティング](https://www.cloudskillsboost.google/course_templates/638/labs/480366?locale=ja)
 にアクセスします。
 
-    > [!CAUTION]
-    > No Costと表示されていることを確認してください。
-    >
-    > ![check no cost](img/1-NoCost.png)
+> [!CAUTION]
+> No Costと表示されていることを確認してください。
+>
+> ![check no cost](img/1-NoCost.png)
 
 1. `ラボを開始`をクリックします。
 
