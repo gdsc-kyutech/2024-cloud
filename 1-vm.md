@@ -199,8 +199,8 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
 
-    > [!ATTENTION]
-    > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> [!ATTENTION]
+> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 ### Compute Engine インスタンスの作成と構成
 1. 次のコマンドを実行してCompute Engineインスタンスを作成します。`zone`は目的などに応じて[任意](https://cloud.google.com/docs/geography-and-regions?hl=ja)に指定することができます。今回は`us-central1-a`を使用します。
