@@ -108,7 +108,7 @@ gcloud config list project
 - 以上の工程を踏まえて、仮想マシン上で自作アプリを動作させる。
 
 ### 料金
-(省略)
+今回はSkills Boostアカウントを通じてGoogle Cloud Platformを使用しているので、読み飛ばして構いません。
 
 ### 準備
 1. Compute Engine APIとCloud Build APIを有効にします。
