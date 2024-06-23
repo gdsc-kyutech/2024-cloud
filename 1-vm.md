@@ -37,30 +37,30 @@ Google Cloud Skills Boostの受講にあたって、以下の注意事項を確�
 >
 > ![check no cost](img/1-NoCost.png)
 
-1. `ラボを開始`をクリックします。
+2. `ラボを開始`をクリックします。
 
     ラボを開始すると、ラボの終了まで使用できる一時的なGoogleアカウントが発行されます。
 
     ![Start Lab](img/1-StartLab1.png)
 
-2. `Open Google Cloud console`を**右クリック**し、`シークレット ウィンドウで開く`を選択します。
-    1. ログイン画面が表示されたら、**先ほど発行された**Usernameをコピー&ペーストして`次へ`をクリックします。
+3. `Open Google Cloud console`を**右クリック**し、`シークレット ウィンドウで開く`を選択します。
+    1. ログイン画面が表示されたら、先ほど発行された**Username**をコピー&ペーストして`次へ`をクリックします。
 
         ![Username](img/1-Username.png)
     
-    2. 同様にPasswordをコピー&ペーストして`次へ`をクリックします。
+    2. 同様に**Password**をコピー&ペーストして`次へ`をクリックします。
     
         ![Password](img/1-Password.png)
 
-3. 確認画面が表示されます。内容を確認して`理解しました`をクリックします。
+4. 確認画面が表示されます。内容を確認して`理解しました`をクリックします。
 
     ![I understand](img/1-Confirm.png)
 
-4. 同意画面が表示されます。内容を確認して1つ目のチェックボックスにチェックをつけて`AGREE AND CONTINUE`をクリックします。
+5. 同意画面が表示されます。内容を確認して1つ目のチェックボックスにチェックをつけて`AGREE AND CONTINUE`をクリックします。
 
     ![I understand](img/1-Agree.png)
 
-5. Google Cloud コンソールのダッシュボードにアクセスすることができました。
+6. Google Cloud コンソールのダッシュボードにアクセスすることができました。
 
     ![Cloud overview](img/1-CloudOverview_Ja.png)
 
@@ -135,7 +135,7 @@ gcloud config list project
     gcloud config set project PROJECT_ID
     ```
 > [!IMPORTANT]
-> `PROJECT_ID`はそれぞれのIDに置き換えてください。
+> `PROJECT_ID`をそれぞれのIDに置き換えてください。
 
 ### Cloud Shellでアプリを実行
 1. 次のコマンドをCloud Shellで実行し、Cloud Shellでローカルウェブサーバーを起動します。
@@ -190,7 +190,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
 > - バケットには任意の名前を付けることができます。付けられるバケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります。
 > - 今回は`PROJECT_ID`をバケット名として使用します。
 
@@ -200,7 +200,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
 
 ### Compute Engine インスタンスの作成と構成
 1. 次のコマンドを実行してCompute Engineインスタンスを作成します。`zone`は目的などに応じて[任意](https://cloud.google.com/docs/geography-and-regions?hl=ja)に指定することができます。今回は`us-central1-a`を使用します。
@@ -217,7 +217,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
 
 2. 次のコマンドを実行してインスタンスへのトラフィックを許可するファイアウォールルールを作成します。
     ```sh
@@ -241,7 +241,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     http://YOUR_INSTANCE_IP
     ```
 > [!IMPORTANT]
-> `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
+> `YOUR_INSTANCE_IP`をそれぞれ確認した外部IPアドレスに置き換えてください。
 
 5. 「`Hello, World!`」と表示されていれば成功です。
 
@@ -296,7 +296,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
 
 4. 同様に、Compute Engineインスタンスを作成します。
     ```sh
@@ -312,7 +312,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
 
 5. 同様に、ファイアウォールルールを作成します。
     ```sh
@@ -336,9 +336,9 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     http://YOUR_INSTANCE_IP/v1/customer/22530
     ```
 > [!IMPORTANT]
-> `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
+> `YOUR_INSTANCE_IP`をそれぞれ確認した外部IPアドレスに置き換えてください。
 
-7. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
+8. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
 
     ![](img/1-VM22530.png)
 
