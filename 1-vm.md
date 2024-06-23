@@ -290,8 +290,8 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
 
-    > [!ATTENTION]
-    > `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
+> [!ATTENTION]
+> `YOUR_BUCKET_NAME`はそれぞれのバケット名に置き換えてください。
 
 1. 同様に、Compute Engineインスタンスを作成します。
     ```sh
