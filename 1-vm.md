@@ -134,8 +134,8 @@ gcloud config list project
     ```sh
     gcloud config set project PROJECT_ID
     ```
-    > [!ATTENTION]
-    > `PROJECT_ID`はそれぞれのIDに置き換えてください。
+> [!ATTENTION]
+> `PROJECT_ID`はそれぞれのIDに置き換えてください。
 
 ### Cloud Shellでアプリを実行
 1. 次のコマンドをCloud Shellで実行し、Cloud Shellでローカルウェブサーバーを起動します。
