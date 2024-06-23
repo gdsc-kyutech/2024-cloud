@@ -244,6 +244,7 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     > `YOUR_INSTANCE_IP`はそれぞれ確認した外部IPアドレスに置き換えてください。
 
 1. 「`Hello, World!`」と表示されていれば成功です。
+
     ![VM Hello World!](img/1-VM_HelloWorld.png)
 
     仮想マシン上でアプリが動作していることを確認できました。
