@@ -4,7 +4,7 @@
 
 ### Chromeのインストールとログイン
 
-1. Google Cloud Skills BoostはChromeを使用しての受講が推奨されています。
+1. Google Cloud Skills Boost の受講には Chrome を使用することが推奨されています。
 [こちら](https://www.google.com/intl/ja_ALL/chrome/)
 からダウンロードし、インストールしてください。
 1. Chromeを起動し、右上のアイコンをクリックします。
