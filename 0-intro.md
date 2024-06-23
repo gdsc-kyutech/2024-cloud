@@ -28,6 +28,8 @@ Google Workspaceには、GmailやGoogle Formsなどのサービスが含まれ�
 
 ## Google Cloud Skills Boost の概要
 
-Google Cloud Skills Boostとは、Google Cloud Platformを実際に使ったハンズオンができるプラットフォームです。
+[Google Cloud Skills Boost](https://www.cloudskillsboost.google/) とは、Google Cloud Platformを実際に使ったハンズオンができるプラットフォームです。
+
 目的別に多様なコースが用意されており、それぞれのコースでは動画・クラウドリソースへ実際にアクセスするハンズオン・理解度チェックのテストなどがあります。
+
 自身のレベルに応じてコースを選びながら、自分のペースでGoogle Cloud Platformについて学ぶことができます。
