@@ -81,8 +81,8 @@ Skills Boostの画面にもガイドがありますが，そちらではなく�
     ![Cloud overview](img/1-CloudOverview_Ja.png)
 
 > [!TIP]
-> 言語は右上の三点メニューの`Perferences`または`設定`から変更することができます．
-> ![Perferences](img/1-Preferences.png)
+> 言語は右上の三点メニューの`Preferences`または`設定`から変更することができます．
+> ![Preferences](img/1-Preferences.png)
 
 ### Cloud Shell の有効化
 
@@ -92,7 +92,7 @@ Google Cloud Platformの各機能は，今見えているWeb上のコンソー�
 1. コンソール画面上部にある`Cloud Shell をアクティブにする`アイコンをクリックします．
 2. 画面下部にCloud Shellが現れ，ポップアップが表示されるので`承認`をクリックします．
 
-    ![Perferences01](img/1-CloudShellActive01.png)
+    ![Preferences01](img/1-CloudShellActive01.png)
 
     接続が完了した時点で，プロジェクトに各自の`PROJECT_ID`が設定されます．黄色の文字列で出力されているのが`PROJECT_ID`です．
 
@@ -108,7 +108,7 @@ gcloud auth list
 
 ポップアップが表示されるので`承認`をクリックします．
 
-![Perferences02](img/1-CloudShellActive02.png)
+![Preferences02](img/1-CloudShellActive02.png)
 
 次のコマンドを使用すると，プロジェクトIDを一覧で表示します．
 ```sh
