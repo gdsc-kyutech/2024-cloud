@@ -1,209 +1,209 @@
-# 1. Compute Engine による VM のセットアップと REST API の構築
+# 1. 仮想マシン(VM)ベースアーキテクチャによるREST API実行環境の構築
 
-## Google Cloud Skills Boost - Compute Engine を使用した Google Cloud でのウェブアプリのホスティング
+前半パートは，以下の流れで進行します．
 
-### Chromeのインストールとログイン
+1. Google Skills Boostを用いたGoogle Cloud環境のセットアップ
+1. サンプルプログラムの実行
+1. より実践的なプログラムの実行
+1. Next to do...
 
-1. Google Cloud Skills Boost の受講には Chrome を使用することが推奨されています。
+## Google Skills Boostを用いたGoogle Cloud環境のセットアップ
+
+まずは，Google Cloud環境を準備します．  
+今回はGoogle Cloud Skills Boostというオンラインラーニングシステムを利用して進行します．
+
+### ChromeのインストールとSkills Boostへのログイン
+
+1. Google Cloud Skills Boost の受講には Chrome を使用することが推奨されています．  
 [こちら](https://www.google.com/intl/ja_ALL/chrome/)
-からダウンロードし、インストールしてください。
-1. Chromeを起動し、右上のアイコンをクリックします。
+からダウンロードし，インストールしてください．
 
-    ![login account1](img/1-Login01.png)
-
-1. `追加`をクリックし、事前に配布しているドメインが`@gdsc.tamasan238.work`のアカウントでログインしてください。
-1. [Google Cloud Skills Boost](https://www.cloudskillsboost.google/?locale=ja)
-にアクセスし、右上の`ログイン`をクリックします。
+1. Chromeで[Google Cloud Skills Boost](https://www.cloudskillsboost.google/?locale=ja)
+にアクセスし，右上の`ログイン`をクリックします．
 
     ![login account2](img/1-Login02.png)
 
-1. 続いて`Google アカウントでログイン`をクリックすると、Google Cloud Skills Boostにログインすることができました。
+1. 続いて`Google アカウントでログイン`をクリックすると，Google Cloud Skills Boostにログインすることができました．
 
     ![login account3](img/1-Login03.png)
 
-### Google Cloudにアクセスする
-Google Cloud Skills Boostの受講にあたって、以下の注意事項を確認してください。
+### Skills Boost ラボの開始
+Google Cloud Skills Boostの利用にあたって，いくつか注意が必要な箇所があります．
 
-- ラボを受講するにはCreditが必要です。初回はNo Costのラボでも2回目以降にCreditが必要になることがあります。
-- ラボには制限時間が設けられています。制限時間内に終了できるようにしましょう。
+- Creditを求められる(＝有料の)ラボもあります．(今回は無料のラボを使用します．)
+- 初回はNo Costのラボでも，2回目以降にはCreditが必要になります．
+- ラボには制限時間が設けられています．制限時間内に終了できるようにしましょう．
 
-それでは、ラボを開始しましょう。
+それでは，ラボを開始しましょう．  
+今回は以下のコースをベースとしつつ，いくつかの細かな変更点を加えました．  
+Skills Boostの画面にもガイドがありますが，そちらではなく本資料を見ながら進行してくださいね．
 
 1. [Compute Engine を使用した Google Cloud でのウェブアプリのホスティング](https://www.cloudskillsboost.google/course_templates/638/labs/480366?locale=ja)
-にアクセスします。
+にアクセスします．
 
 > [!CAUTION]
-> No Costと表示されていることを確認してください。
+> No Costと表示されていることを確認してください．
 >
 > ![check no cost](img/1-NoCost.png)
 
-2. `ラボを開始`をクリックします。
+2. `ラボを開始`をクリックします．
 
-    ラボを開始すると、ラボの終了まで使用できる一時的なGoogleアカウントが発行されます。
+    ラボを開始すると，ラボの終了まで使用できる一時的なGoogleアカウントが発行されます．  
+    以後ログインを求められた場合は，すべてこのGoogleアカウントでログインしてください．  
+    個人のGoogleアカウントでログにしてしまうと，意図せず課金されてしまうことがあります．
 
     ![Start Lab](img/1-StartLab1.png)
 
-3. `Open Google Cloud console`を**右クリック**し、`シークレット ウィンドウで開く`を選択します。
-    1. ログイン画面が表示されたら、先ほど発行された**Username**をコピー&ペーストして`次へ`をクリックします。
+3. `Open Google Cloud console`を**右クリック**し，`シークレット ウィンドウで開く`を選択します．
 
-        ![Username](img/1-Username.png)
-    
-    2. 同様に**Password**をコピー&ペーストして`次へ`をクリックします。
-    
-        ![Password](img/1-Password.png)
+> [!NOTE]
+> 普段使用しているGoogleアカウントへの意図しない課金が発生することを防ぐために，  
+> シークレットウィンドウの利用が推奨されています．
 
-4. 確認画面が表示されます。内容を確認して`理解しました`をクリックします。
+4. ログイン画面が表示されたら，先ほど発行された**Username**をコピー&ペーストして`次へ`をクリックします．
+
+    ![Username](img/1-Username.png)
+
+5. 同様に**Password**をコピー&ペーストして`次へ`をクリックします．
+
+    ![Password](img/1-Password.png)
+
+6. 確認画面が表示されます．内容を確認して`理解しました`をクリックします．
 
     ![I understand](img/1-Confirm.png)
 
-5. 同意画面が表示されます。内容を確認して1つ目のチェックボックスにチェックをつけて`AGREE AND CONTINUE`をクリックします。
+7. 利用規約が表示されます．内容を確認して1つ目のチェックボックスにチェックをつけて`AGREE AND CONTINUE`をクリックします．
 
     ![I understand](img/1-Agree.png)
 
-6. Google Cloud コンソールのダッシュボードにアクセスすることができました。
+8. Google Cloud コンソールのダッシュボードにアクセスすることができました．
 
     ![Cloud overview](img/1-CloudOverview_Ja.png)
 
 > [!TIP]
-> 言語は右上の三点メニューの`Perferences`または`設定`から変更することができます。
+> 言語は右上の三点メニューの`Perferences`または`設定`から変更することができます．
 > ![Perferences](img/1-Preferences.png)
 
-### Cloud Shell をアクティブにする
-Cloud Shellは、開発ツールと一緒に読み込まれるGoogle Cloudで稼働する仮想マシンです。Cloud Shellを使用すると、コマンドラインでGoogle Cloudリソースにアクセスできます。
+### Cloud Shell の有効化
 
-1. コンソール画面上部にある`Cloud Shell をアクティブにする`アイコンをクリックします。
-2. 画面下部にCloud Shellが現れ、ポップアップが表示されるので`承認`をクリックします。
+Google Cloud Platformの各機能は，今見えているWeb上のコンソール画面(GUI)とCloud Shellを用いたCUIの両方で扱うことができます．  
+今日は，適宜コンソールでのGUI操作とCloud ShellによるCUI操作を使い分けながら進行します．
+
+1. コンソール画面上部にある`Cloud Shell をアクティブにする`アイコンをクリックします．
+2. 画面下部にCloud Shellが現れ，ポップアップが表示されるので`承認`をクリックします．
 
     ![Perferences01](img/1-CloudShellActive01.png)
 
-    接続が完了した時点で、プロジェクトに各自の`PROJECT_ID`が設定されます。黄色の文字列で出力されているのが`PROJECT_ID`です。
+    接続が完了した時点で，プロジェクトに各自の`PROJECT_ID`が設定されます．黄色の文字列で出力されているのが`PROJECT_ID`です．
 
     ![Project ID](img/1-PROJECT_ID.png)
     
-    `PROJECT_ID`は後ほど使用しますので、メモ帳などに保存しておいてください。
+    `PROJECT_ID`は後ほど使用しますので，メモ帳などに保存しておいてください．
 
-### Cloud Shellを使用してみる
-次のコマンドを使用すると、有効なアカウント名を一覧で表示します。
+### Cloud Shell の使用
+次のコマンドを使用すると，有効なアカウント名を一覧で表示します．
 ```sh
 gcloud auth list
 ```
 
-ポップアップが表示されるので`承認`をクリックします。
+ポップアップが表示されるので`承認`をクリックします．
 
 ![Perferences02](img/1-CloudShellActive02.png)
 
-次のコマンドを使用すると、プロジェクトIDを一覧で表示します。
+次のコマンドを使用すると，プロジェクトIDを一覧で表示します．
 ```sh
 gcloud config list project
 ```
 
-`gcloud`はGoogle Cloudのコマンドラインツールです。このツールはCloud Shellにプリインストールされています。
+`gcloud`はGoogle Cloudのコマンドラインツールです．
 
-## Compute Engine での Go のスタートガイド
+## サンプルプログラムの実行
 
-### 目標
-- Cloud Shellを使用してHello Worldサンプルアプリをダウンロードしてデプロイする。
-- Cloud Buildを使用してHello Worldサンプルアプリをビルドする。
-- Hello Worldサンプルアプリを単一のCompute Engineインスタンスにデプロイする。
-- 以上の工程を踏まえて、仮想マシン上で自作アプリを動作させる。
+ここからは，VM上で動作させるアプリケーションを作成します．  
+ベースとなるプログラムファイルを提供しますので，指示のとおりに改変していきましょう．  
 
-### 料金
-今回はSkills Boostアカウントを通じてGoogle Cloud Platformを使用しているので、読み飛ばして構いません。
+なお，本コースはGoogle Cloudが提供する [Compute Engine での Go のスタートガイド](https://cloud.google.com/go/getting-started/getting-started-on-compute-engine?hl=ja) をベースに作成しています．
 
 ### 準備
-1. Compute Engine APIとCloud Build APIを有効にします。
+1. これから扱うCompute Engine APIとCloud Build APIを有効化します．
 
     1. [こちら](https://console.cloud.google.com/flows/enableapi?apiid=compute%2Ccloudbuild.googleapis.com&hl=ja&_ga=2.43494823.320691267.1718768559-758716497.1715673126)
-    のリンクを**右クリック**し、シークレットウィンドウで開きます。
-    2. プロジェクト名が先ほどメモした`PROJECT_ID`と同じであることを確認して`次へ`をクリックします。
+    のリンクを**右クリック**し，シークレットウィンドウで開きます．
+    2. プロジェクト名が先ほどメモした`PROJECT_ID`と同じであることを確認して`次へ`をクリックします．
 
         ![API02](img/1-API01.png)
 
-    3. `有効にする`をクリックします。
+    3. `有効にする`をクリックします．
 
         ![API02](img/1-API02.png)
 
-2. 環境のセットアップ（git clone）を行います。Cloud Shellでは直接クラウドリソースにアクセスすることができます。
+2. Gitリポジトリで提供されるサンプルファイルを取得します．
     1. [こちら](https://cloud.google.com/console/cloudshell/open?git_repo=https%3A%2F%2Fgithub.com%2FGoogleCloudPlatform%2Fgolang-samples&working_dir=getting-started%2Fgce&hl=ja)
-    のリンクを**右クリック**し、シークレットウィンドウで開きます。
-    2. `確認`をクリックします。
+    のリンクを**右クリック**し，シークレットウィンドウで開きます．
+    2. `確認`をクリックします．
 
         ![Git Clone](img/1-GitClone.png)
 
-3. 次のコマンドをCloud Shellで実行し、新しいGoogle Cloudプロジェクトを設定します。
+3. 次のコマンドをCloud Shellで実行し，新しいGoogle Cloudプロジェクトを設定します．
     ```sh
     gcloud config set project PROJECT_ID
     ```
 > [!IMPORTANT]
-> `PROJECT_ID`をそれぞれのIDに置き換えてください。
+> `PROJECT_ID`は，ご自身のPROJECT_IDに置き換えてください．
 
-### Cloud Shellでアプリを実行
-1. 次のコマンドをCloud Shellで実行し、Cloud Shellでローカルウェブサーバーを起動します。
-    ```sh
-    go build -o app
-    ./app
-    ```
-
-2. Cloud Shell画面右上の`ウェブでプレビュー`アイコンをクリックし、`ポート8080でプレビュー`を選択します。新しいウィンドウが開き、実行中のアプリが表示されます。
-
-    ![Port8080](img/1-Port8080.png)
-
-3. ウェブブラウザに「`Hello, World!`」と表示されます。
-
-    ![Hello World!](img/1-HelloWorld.png)
-
-4. Cloud Shellの画面に戻り、`Ctrl`+`C`キーを同時に押してローカルウェブサーバを停止させます。
-
-    ![Stop Server](img/1-Ctrl+C.png)
-
-### ファイルの修正
-次にCloud Buildを使用し、アプリのビルドを行います。提供されているファイルには不具合があるため、ビルドを行う前にファイルの修正を行います。
-
-1. Logging機能が動作しないため、`startup-script.sh`ファイルを編集します。
-    1. Cloud Shell Editorの画面でEXPLORERを開きます。
-    2. `cloudshell_open/golang-samples/getting-started/gce/startup-script.sh`にアクセスします。
+4. 提供されているファイルには不具合があるため，これを修正します．  
+まずはLogging機能をバイパスするため，`startup-script.sh`ファイルを編集します．
+    1. Cloud Shell Editorの画面でEXPLORERを開きます．
+    2. `cloudshell_open/golang-samples/getting-started/gce/startup-script.sh`にアクセスします．
 
         ![Edit startup-script.sh](img/1-strtup-script.png)
     
-    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
+    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し，`Delete`キーで全削除します．
     4. [こちら](./source/1/startup-script.sh)
-        にアクセスし、コードをコピーして先ほど内容を全削除した`startup-script.sh`に貼り付けます。
-    5. 変更内容は自動的に保存されます。
+        にアクセスし，コードをコピーして先ほど内容を全削除した`startup-script.sh`に貼り付けます．
+    5. 変更内容は自動的に保存されます．
 
-2. ビルド環境と実行環境のバージョンを合わせるため、`cloudbuild.yaml`ファイルを編集します。
-    1. 先ほどと同様にCloud Shell Editorの画面でEXPLORERを開きます。
-    2. `cloudshell_open/golang-samples/getting-started/gce/cloudbuild.yaml`にアクセスします。
+5. 続いてビルド環境と実行環境のバージョンを合わせるため，`cloudbuild.yaml`ファイルを編集します．
+    1. 先ほどと同様にCloud Shell Editorの画面でEXPLORERを開きます．
+    2. `cloudshell_open/golang-samples/getting-started/gce/cloudbuild.yaml`にアクセスします．
 
         ![Edit cloudbuild.yaml](img/1-cloudbuild.png)
 
-    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
+    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し，`Delete`キーで全削除します．
     4. [こちら](./source/1/cloudbuild.yaml)
-        にアクセスし、コードをコピーして先ほど内容を全削除した`cloudbuild.yaml`に貼り付けます。
-    5. 変更内容は自動的に保存されます。
+        にアクセスし，コードをコピーして先ほど内容を全削除した`cloudbuild.yaml`に貼り付けます．
+    5. 変更内容は自動的に保存されます．
 
-### アプリのビルド
-Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧縮し、Cloud Storageバケットにこのファイルをアップロードできます。バケットは、Cloud Storageでデータを格納する基本的なコンテナです。
+ここまでで，サンプルプログラムをビルドするための準備が完了しました．
 
-1. Cloud Shellで次のコマンドを実行し、Cloud Storageバケットを作成します。`YOUR_BUCKET_NAME` はバケット名を表します。
+### ビルド
+
+アプリケーションを動作させるために，Cloud Buildを用いてビルド(≒コンパイル)を行います．
+
+1. Cloud Shellで次のコマンドを実行し，Cloud Buildの動作に必要なCloud Storageバケットを作成します．  
+`YOUR_BUCKET_NAME` はバケット名を表します．
     ```sh
     gsutil mb gs://YOUR_BUCKET_NAME
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
-> - バケットには任意の名前を付けることができます。付けられるバケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります。
-> - 今回は`PROJECT_ID`をバケット名として使用します。
+> `YOUR_BUCKET_NAME`は，ご自身で好きなバケット名をつけて置き換えてください．
+> - なお，バケット名には[条件](https://cloud.google.com/storage/docs/buckets?hl=ja#naming)があります．
 
-2. 次のコマンドを実行してビルドを開始します。
+2. 次のコマンドを実行してビルドを開始します．
     ```sh
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください．
 
-### Compute Engine インスタンスの作成と構成
-1. 次のコマンドを実行してCompute Engineインスタンスを作成します。`zone`は目的などに応じて[任意](https://cloud.google.com/docs/geography-and-regions?hl=ja)に指定することができます。今回は`us-central1-a`を使用します。
+### VMの作成
+
+ここでは，サンプルプログラムのバイナリデータ(ビルド結果)を専用のVMにインストールしてその動作を確認します．
+
+1. まずは次のコマンドを実行してVMを作成します．  
+`zone`は目的などに応じて[任意](https://cloud.google.com/docs/geography-and-regions?hl=ja)に指定することができます．今回は`us-central1-a`を使用します．
     ```sh
     gcloud compute instances create my-app-instance \
     --image-family=debian-10 \
@@ -217,9 +217,9 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`はご自身が定めたバケット名に置き換えてください．
 
-2. 次のコマンドを実行してインスタンスへのトラフィックを許可するファイアウォールルールを作成します。
+2. 次のコマンドを実行して，VMへの特定のネットワーク通信を許可します．
     ```sh
     gcloud compute firewall-rules create default-allow-http-80 \
     --allow tcp:80 \
@@ -228,77 +228,79 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --description "Allow port 80 access to http-server"
     ```
 
-3. 次のコマンドを実行してインスタンスの外部IPアドレスを取得します。
+3. 次のコマンドを実行してVMの外部IPアドレスを取得します．
     ```sh
     gcloud compute instances list
     ```
-    インターナルの外部IPアドレスは`EXTERNAL_IP: xxx.xxx.xxx.xxx`の形式で出力されます。
+    `EXTERNAL_IP: xxx.xxx.xxx.xxx`の形式で出力されたIPアドレスをメモしてください．
 
     ![External_IP01](img/1-External_IP01.png)
 
-4. ブラウザで次のURLにアクセスし、アプリが実行されていることを確認してください。
+4. ブラウザで次のURLにアクセスします．
     ```
     http://YOUR_INSTANCE_IP
     ```
 > [!IMPORTANT]
-> `YOUR_INSTANCE_IP`をそれぞれ確認した外部IPアドレスに置き換えてください。
+> `YOUR_INSTANCE_IP`は，先ほど確認した外部IPアドレスに置き換えてください．
 
-5. 「`Hello, World!`」と表示されていれば成功です。
+5. 「`Hello, World!`」と表示されていれば正しくVMが起動しています．
 
     ![VM Hello World!](img/1-VM_HelloWorld.png)
 
-    仮想マシン上でアプリが動作していることを確認できました。
-
 ### リソースを削除
-アプリの動作が確認できたので、次の手順に備えてリソースを削除します。
+
+サンプルプログラムの動作を確認できたので，次の手順に備えてここまでに作成したリソースを削除します．
+
 1. インスタンスの削除
-    1. 次のコマンドを実行して、インスタンスを削除します。
+    1. 次のコマンドを実行して，インスタンスを削除します．
         ```sh
         gcloud compute instances delete my-app-instance --zone=us-central1-a --delete-disks=all
         ```
         > [!IMPORTANT]
-        > 削除するインスタンスの`zone`を指定する必要があります。今回は`us-central1-a`です。
+        > 削除するインスタンスの`zone`を指定する必要があります．今回は`us-central1-a`です．
 
-    2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
+    2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します．
 
         ![Delete Resource](img/1-DeleteResource.png)
 
 2. ファイアウォールルールの削除
 
-    1. 次のコマンドを実行して、ファイアウォールルールを削除します。
+    1. 次のコマンドを実行して，ファイアウォールルールを削除します．
         ```sh
         gcloud compute firewall-rules delete default-allow-http-80
         ```
-    2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します。
+    2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します．
 
 
-### 自作アプリを仮想マシン上で動作させる
-`main.go`のプログラムを書き換えて、顧客のデータが確認できるようなアプリを仮想マシン上で実現してみましょう。
+## より実践的なプログラムの実行
 
-1. `main.go`ファイルを書き換えます。
-    1. Cloud Shell Editorの画面でEXPLORERを開きます。
-    2. `cloudshell_open/golang-samples/getting-started/gce/main.go`にアクセスします。
+ここまでで，アプリケーションファイルを準備し，ビルドし，VM上で動作させる方法を学ぶことができました．  
+続いて`main.go`のプログラムを書き換え，顧客のデータを取得できるアプリを仮想マシン上で実現してみましょう．
+
+1. `main.go`ファイルを書き換えます．
+    1. Cloud Shell Editorの画面でEXPLORERを開きます．
+    2. `cloudshell_open/golang-samples/getting-started/gce/main.go`にアクセスします．
         ![Edit main.go](img/1-main.png)
-    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し、`Delete`キーで全削除します。
+    3. `Ctrl`+`A`キーを同時に押してテキストを全選択し，`Delete`キーで全削除します．
     4. [こちら](./source/1/main.go)
-        にアクセスし、コードをコピーして先ほど内容を全削除した`main.go`に貼り付けます。
-    5. 変更内容は自動的に保存されます。
+        にアクセスし，コードをコピーして先ほど内容を全削除した`main.go`に貼り付けます．
+    5. 変更内容は自動的に保存されます．
 
-2. Cloud Shellで以下のコマンドを実行し、アプリのビルドに必要なライブラリをインストールします。
+2. Cloud Shellで以下のコマンドを実行し，アプリのビルドに必要なライブラリをインストールします．
     ```sh
     go get github.com/gorilla/handlers
     go get github.com/gorilla/mux
     ```
 
-3. 先ほどと同様の手順で、ビルドを行います。
+3. 先ほどと同様の手順で，ビルドを行います．
     ```sh
     gcloud builds submit --substitutions=_DEPLOY_DIR=gs://YOUR_BUCKET_NAME,_DEPLOY_FILENAME=app.tar.gz
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`はご自身のバケット名に置き換えてください．
 
-4. 同様に、Compute Engineインスタンスを作成します。
+4. VMを作成します．
     ```sh
     gcloud compute instances create my-app-instance \
     --image-family=debian-10 \
@@ -312,9 +314,9 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください。
+> `YOUR_BUCKET_NAME`はご自身のバケット名に置き換えてください．
 
-5. 同様に、ファイアウォールルールを作成します。
+5. 同様に，ファイアウォールルールを作成します．
     ```sh
     gcloud compute firewall-rules create default-allow-http-80 \
     --allow tcp:80 \
@@ -323,48 +325,62 @@ Cloud Buildを使用すると、アプリをビルドしてtarファイルに圧
     --description "Allow port 80 access to http-server"
     ```
 
-6. 以下のコマンドを実行して、インスタンスの外部IPアドレスを取得します。
+6. 以下のコマンドを実行して，インスタンスの外部IPアドレスを取得します．
     ```sh
     gcloud compute instances list
     ```
-    インターナルの外部IPアドレスは`EXTERNAL_IP: xxx.xxx.xxx.xxx`の形式で出力されます。
+    `EXTERNAL_IP: xxx.xxx.xxx.xxx`の形式で出力されたIPアドレスをメモしてください．
     
     ![External_IP02](img/1-External_IP02.png)
 
-7. ブラウザで次のURLにアクセスし、アプリが実行されていることを確認してください。
+7. ブラウザで次のURLにアクセスし，アプリが実行されていることを確認してください．
     ```
     http://YOUR_INSTANCE_IP/v1/customer/22530
     ```
 > [!IMPORTANT]
-> `YOUR_INSTANCE_IP`をそれぞれ確認した外部IPアドレスに置き換えてください。
+> `YOUR_INSTANCE_IP`は，先ほど確認した外部IPアドレスに置き換えてください．
 
-8. 外部IPアドレスにアクセスし、「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば成功です。
+8. 外部IPアドレスにアクセスし，「`{"status": "success", "data": {"approved":585,"proposed":1602,"rejected":489}}`」と表示されていれば正常に動作しています．
 
     ![](img/1-VM22530.png)
 
-    1. ここでURL末尾の`22530`は
-    [main.go](./source/1/main.go)
-    で定義している顧客の`ID`に対応しています。URLを指定することで顧客の取引履歴にアクセスしています。
-    2. 以下は取引履歴が存在しない`ID: "70156"`の顧客のデータを参照した場合です。
+    URL末尾の`22530`は予め記録されている顧客の`ID`を示しています．  
+    この顧客IDをURLのパラメータとして指定することで，その顧客の取引履歴を取得できています．  
+    ここで，取引履歴が存在しないID(例：70156)や，そもそも存在しない顧客ID(例：12345)を入力するとどのような結果を得られるでしょうか．
+
+    <details>
+    <summary>結果</summary>
+    以下は取引履歴が存在しない`ID: "70156"`の顧客のデータを参照した場合です．
 
         ![](img/1-VM70156.png)
-    
-    3. 存在しない顧客である`ID: "12345"`を参照するとこのようになります。
-    
+
+    存在しない顧客である`ID: "12345"`を参照するとこのようになります．
+
         ![](img/1-VM12345.png)
+    </details>
  
-## DBの導入やスケーラビリティの実現について
+## Next to do...
 
-Google Cloud Compute Engine によって、VM のセットアップと REST API の構築が完了しました。
+Google Cloud Compute Engine を用いてVMを作成し，その上で自作のプログラムを動作させることができました．  
+VMの利用料金を払い続けることで，このままこのプログラムを使用することができます．
 
-しかし、現状のmain.goはコード内に直接データを記述しているため、アルゴリズムとデータが密結合している状態です。また、データベースを導入していないため、データの永続化やアクセスの管理が難しい状況です。
+しかし，実はこのアーキテクチャにはいくつかの問題があります．
 
-これを解決するためには、データベースを導入し、データとアルゴリズムを分離することが重要です。
+1. アップデートや脆弱性対応など，アプリケーション以外の領域に対して継続的なメンテナンスが必要
+    - 今回動かしているアプリケーションの他にも，Linuxでは多くのアプリケーションが動作しています．  
+    そのすべてに対応し続けなければなりません．
+    - 脆弱性はいつ発見されるか分かりません．常に情報収集し，影響の大きさや影響が及ぶ可能性を迅速に判断する必要があります．
+    - アップデートにはアプリケーションやVMの再起動が必要なものも多く，システムが使えない時間が発生します．
+1. 利用者やデータの増減に合わせて，都度対応が必要
+    - 今後の需要を予測して，VMのスペックを上げ下げしたり，VMの数を調整したりという手間が発生します．
+    - 予測に失敗すると必要以上のお金がかかったり，システムがダウンしてしまったりという問題に繋がります．
+1. ...
 
-また、スケーラビリティの観点からも、現状の Compute Engine では、負荷が増加した際にスケールアウトが難しいという課題があります。
+クラウドサービスでは，これらの問題を解決するために様々な「マネージドサービス」が提供されています．  
+これらのマネージドサービスを用いることで，いわゆる「サーバレス」な環境でアプリケーションを安全かつ快適に実行することができます．
 
-これらの課題を解決するために、次のステップとして、Cloud Run と Firestore によるサーバーレス REST API の構築を行いましょう。
+実際に，Cloud Run と Firestore を用いて今回作成したアプリケーションを動作させてみましょう．
 
-[2. Cloud Run と Firestore によるサーバーレスREST APIの構築](2-sv-less.md)へ進む
+[2. Cloud Run と Firestore を用いたサーバーレスREST API実行環境の構築](2-sv-less.md)へ進む
 
 [目次に戻る](README.md)
