@@ -4,10 +4,13 @@
 
 ### Part 1: Hands-on Session
 
-#### [1. Compute Engine による VM のセットアップと REST API の構築](1-vm.md)
+#### [0. はじめに](0-intro.md)
 
 1. Google Cloud Platform の概要
 1. Google Cloud Skills Boost の概要
+
+#### [1. Compute Engine による VM のセットアップと REST API の構築](1-vm.md)
+
 1. Google Cloud Skills Boost - Compute Engine を使用した Google Cloud でのウェブアプリのホスティング
 1. Compute Engine での Go のスタートガイド
 1. DBの導入やスケーラビリティの実現について
