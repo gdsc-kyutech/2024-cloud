@@ -50,7 +50,7 @@ Skills Boostの画面にもガイドがありますが，そちらではなく�
 
     ラボを開始すると，ラボの終了まで使用できる一時的なGoogleアカウントが発行されます．  
     以後ログインを求められた場合は，すべてこのGoogleアカウントでログインしてください．  
-    個人のGoogleアカウントでログにしてしまうと，意図せず課金されてしまうことがあります．
+    個人のGoogleアカウントでログインしてしまうと，意図せず課金されてしまうことがあります．
 
     ![Start Lab](img/1-StartLab1.png)
 
@@ -90,7 +90,7 @@ Google Cloud Platformの各機能は，今見えているWeb上のコンソー�
 今日は，適宜コンソールでのGUI操作とCloud ShellによるCUI操作を使い分けながら進行します．
 
 1. コンソール画面上部にある`Cloud Shell をアクティブにする`アイコンをクリックします．
-2. 画面下部にCloud Shellが現れ，ポップアップが表示されるので`承認`をクリックします．
+2. 画面下部にCloud Shellが現れ，ポップアップが表示されるので`続行`をクリックします．
 
     ![Preferences01](img/1-CloudShellActive01.png)
 
@@ -196,7 +196,7 @@ gcloud config list project
     ```
 
 > [!IMPORTANT]
-> `YOUR_BUCKET_NAME`をそれぞれのバケット名に置き換えてください．
+> `YOUR_BUCKET_NAME`はご自身が定めたバケット名に置き換えてください．
 
 ### VMの作成
 
@@ -256,8 +256,8 @@ gcloud config list project
         ```sh
         gcloud compute instances delete my-app-instance --zone=us-central1-a --delete-disks=all
         ```
-        > [!IMPORTANT]
-        > 削除するインスタンスの`zone`を指定する必要があります．今回は`us-central1-a`です．
+> [!IMPORTANT]
+> 削除するインスタンスの`zone`を指定する必要があります．今回は`us-central1-a`です．
 
     2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します．
 
