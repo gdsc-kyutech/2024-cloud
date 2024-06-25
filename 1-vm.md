@@ -256,12 +256,13 @@ gcloud config list project
         ```sh
         gcloud compute instances delete my-app-instance --zone=us-central1-a --delete-disks=all
         ```
-> [!IMPORTANT]
-> 削除するインスタンスの`zone`を指定する必要があります．今回は`us-central1-a`です．
 
     2.  削除の際に確認が求められるので`y`を入力し`Enter`キーで確定します．
 
         ![Delete Resource](img/1-DeleteResource.png)
+
+> [!IMPORTANT]
+> 削除するインスタンスの`zone`を指定する必要があります．今回は`us-central1-a`です．
 
 2. ファイアウォールルールの削除
 
