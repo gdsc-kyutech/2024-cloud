@@ -66,7 +66,7 @@ Skills Boostの画面にもガイドがありますが，そちらではなく�
 
 5. 同様に**Password**をコピー&ペーストして`次へ`をクリックします．
 
-    ![Password](img/1-Password.png)
+    ![Password](img/1-Password_SC.png)
 
 6. 確認画面が表示されます．内容を確認して`理解しました`をクリックします．
 
