@@ -29,7 +29,7 @@ Google Cloud Platform(GCP)とは，Googleが提供するクラウドコンピュ
     コンテナ化されたアプリケーションを容易に動かすことのできる実行環境．Dockerを動作させるまでの要素を気にせずにコンテナを動作させることができる．
 - **Kubernetes Engine**  
     Kubernetes実行環境．Linuxサーバなど，Docker/Kubernetesを動かすために必要な要素を気にせずにコンテナ群を動かすことができる．
-- **Code Build** 
+- **Cloud Build**  
     実装したコードを迅速に適用(デプロイ)するためのプラットフォーム．
 
 ## Google Cloud Skills Boost の概要
