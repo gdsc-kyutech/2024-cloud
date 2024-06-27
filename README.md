@@ -46,3 +46,11 @@ Q&Aコーナーもありますので，気になることがあればこの機�
 - イベント録画(準備中)  
 本資料を用いて，2024/06/29(土)に九州工業大学飯塚キャンパスポルト棟にてハンズオンイベントを開催しました．  
 イベント詳細は[こちら](https://gdsc.community.dev/events/details/developer-student-clubs-kyushu-institute-of-technology-fukuoka-japan-presents-hazimetenogoogle-cloud-sabaresu-tsute-douiukoto/)から
+
+## FAQ
+
+### エラーが出た
+
+意図せずファイルを編集してしまっている可能性があります．  
+(コマンドのペーストを行う際，エディタ側に貼り付けられてしまう場合があります．)    
+エディタに表示されているファイルを，再度本リポジトリのリンクからコピペしなおしてみてください．
