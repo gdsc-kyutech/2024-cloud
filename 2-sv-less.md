@@ -1,6 +1,6 @@
 # 2. Cloud Run と Firestore を用いたサーバーレスREST API実行環境の構築
 
-ハンズオンパートの後半では，[Google Cloud Skills Boost - Developing a REST API with Go and Cloud Run](https://www.cloudskillsboost.google/course_templates/741/labs/464421) に取り組んで，Cloud Run と Firestore によるサーバーレス REST API 実行環境の構築を行います．
+ハンズオンパートの後半では，[Google Cloud Skills Boost - Developing a REST API with Go and Cloud Run](https://www.cloudskillsboost.google/course_templates/741/labs/489307) に取り組んで，Cloud Run と Firestore によるサーバーレス REST API 実行環境の構築を行います．
 
 > [!IMPORTANT]
 > `このリソースへのアクセスが拒否されました` と表示される方は，下部の注意事項をご覧ください．
