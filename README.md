@@ -24,6 +24,15 @@
 1. REST API を Firestore データベースに接続する
 1. 新しいリビジョンをデプロイする
 
+#### [3. [Advanced] 次のステップへ](3-advanced.md)
+
+1. Google Cloud Skills Boostの他のコースに挑戦してみる
+1. Google Cloudで自由に実装してみる
+1. 他の事業者が提供するクラウドサービスを使ってみる
+1. 認定資格に挑戦してみる
+1. 自分でクラウドを作ってみる
+1. クラウド基盤を研究する
+
 ### Part 2: Career Panel Discussion
 
 現役Google Developer Expertsにご登壇いただき，パネルディスカッション形式でお話を伺います．  

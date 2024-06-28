@@ -371,6 +371,6 @@ VMの利用料金を払い続けることで，このままこのプログラム
 
 実際に，Cloud Run と Firestore を用いて今回作成したアプリケーションを動作させてみましょう．
 
-[2. Cloud Run と Firestore を用いたサーバーレスREST API実行環境の構築](2-sv-less.md)へ進む
+[2. Cloud Run と Firestore を用いたサーバーレスREST API実行環境の構築](2-sv-less.md) へ進む
 
 [目次に戻る](README.md)
