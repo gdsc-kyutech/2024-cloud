@@ -19,26 +19,10 @@ Linuxやデータベース，Webサーバといった要素はすべてGoogleに
 
 ### (1) 一部の環境からは上記ページにアクセスできないことを確認しています
 
-その場合，日本語版の[Google Cloud Skills Boost - Go と Cloud Run を使用した REST API の開発](https://www.cloudskillsboost.google/course_templates/741/labs/463386)を参照してください．
+その場合，日本語版の[Google Cloud Skills Boost - Go と Cloud Run を使用した REST API の開発](https://www.cloudskillsboost.google/course_templates/741/labs/489307?locale=ja)を参照してください．
 
-### (2) 日本語版ではDockefileに不具合があり，以下のエラーが出ることを確認しています
 
-```sh
-Revision '' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
-```
-
-このエラーは，Dockerfileのdebianのバージョンが古く，Goが使用しているGLIBCのバージョンと合わないためビルドに失敗し，サーバーが起動できていないというものです．（参考 : https://tech-lab.sios.jp/archives/35991 ）
-
-Dockerfileを以下のように修正してください．
-
-```Dockerfile
-FROM gcr.io/distroless/base-debian12
-WORKDIR /usr/src/app
-COPY server .
-CMD [ "/usr/src/app/server" ]
-```
-
-### (3) 日本語版ではタスク7を最後まで閲覧できない不具合があります
+### (2) 日本語版ではタスク7を最後まで閲覧できない不具合があります
 
 タスク7の内容を以下に示すので，参考にしてください．
 
