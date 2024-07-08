@@ -52,7 +52,7 @@ Q&Aコーナーもありますので，気になることがあればこの機�
 - **[スライド](slide.pdf)**  
 講座で使用したスライドです．
 
-- イベント録画(準備中)  
+- **[イベント録画](https://youtu.be/oCwpcqV3WhI)**  
 本資料を用いて，2024/06/29(土)に九州工業大学飯塚キャンパスポルト棟にてハンズオンイベントを開催しました．  
 イベント詳細は[こちら](https://gdsc.community.dev/events/details/developer-student-clubs-kyushu-institute-of-technology-fukuoka-japan-presents-hazimetenogoogle-cloud-sabaresu-tsute-douiukoto/)から
 
